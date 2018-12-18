@@ -827,6 +827,7 @@
 
 (define (ar-type x)
   (cond ((ar-tagged? x)     (vector-ref x 1))
+        ((boolean? x)       'bool)
         ((pair? x)          'cons)
         ((symbol? x)        'sym)
         ((null? x)          'sym)
