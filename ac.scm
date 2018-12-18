@@ -169,7 +169,7 @@
 
 (define (build-sexpr toks orig)
   (cond ((null? toks)
-         'get)
+         'index)
         ((null? (cdr toks))
          (chars->value (car toks)))
         (#t

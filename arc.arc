@@ -1608,7 +1608,7 @@
 
 ; if renamed this would be more natural for (map [_ user] pagefns*)
 
-(def get (index) [_ index])
+(def index (index) [_ index])
 
 (= savers* (table))
 
