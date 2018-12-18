@@ -55,7 +55,8 @@
       (char? x)
       (string? x)
       (number? x)
-      (eq? x '())))
+      (eq? x '())
+      (keyword? x)))
 
 (define (ssyntax? x)
   (and (symbol? x)
@@ -842,6 +843,7 @@
         ((tcp-listener? x)  'socket)
         ((exn? x)           'exception)
         ((thread? x)        'thread)
+        ((keyword? x)       'keyword)
         (#t                 (err "Type: unknown type" x))))
 (xdef type ar-type)
 
